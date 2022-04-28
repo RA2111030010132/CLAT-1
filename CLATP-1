@@ -1,23 +1,23 @@
 #include<stdio.h>
 int main()
-{ char operation;
-int a.b;
+{ char operator;
+int a,b;
 float solution;
-printf9"Choose an operator(+,-,*,/) to perform teh operation in C calculator\n");
-scanf("%c",&operation);
-if(operation=='/')
+printf("Choose an operator(+,-,*,/) to perform the operation in C calculator\n");
+scanf("%c",&operator);
+if(operator =='/')
 {
 printf("You have selected: Division");
 }
-else if(operation=='*')
+else if(operator=='*')
 {
 printf("You have selected: Multiplication");
 }
-else if(operation=="-")
+else if(operator=="-")
 {
 printf("You have selected: Subtraction");
 }
-else if(operation =='+')
+else if(operator =='+')
 {
 printf(You have selected: Addition");
 }
@@ -39,23 +39,24 @@ case'-':
 solution=a-b;
 printf("Subtraction of %d and %d is: %.2f",a,b,solution);
 break;
-case '*':printf("Subtraction of %d and %d is: %.2f",a,b,solution);
-break;
 case '*':
 solution=a*b;
 printf("Multiplication of %d and %d is:%.2f",a,b,solution);
 break;
+case '%':
+solution=a%b;
+printf("Modulus of %d and %d is:%.2f",a,b,solution);
 case '/':
 if(b==0)
 {
-printf("\n Diviisor cannot be zero. Please enter another value");
+printf("\n Divisor cannot be zero. Please enter another value");
 scanf("%d",&n2);
 }
 solution=a/b;
 printf("Division of %d and %d is: %.2f",a,b,solution);
 break;
 default:
-printf("Something is wrong!! Please check the options");
+printf("Error: The given option is unavailable");
 }
 return 0;
 }
